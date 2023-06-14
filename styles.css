@@ -148,6 +148,9 @@ p {
       background-color: #008CBA;
       color: white;
   }
+  .greeting {
+    text-align: center;
+  }
 
   @media (max-width: 600px) {
     .column {
