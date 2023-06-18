@@ -13,6 +13,49 @@
         .imagenes {
             display: flex;
         }
+
+        .slider-container {
+        position: relative;
+        width: 50%;
+        margin: 0 auto; 
+        width: 800px;
+        height: 300px;
+        overflow: hidden;
+        margin-bottom: 15px;
+        }
+
+        .slider {
+        display: flex;
+        width: 300%;
+        height: 100%;
+        transition: transform 0.5s ease;
+        }
+
+        .slider img {
+        width: 33.33%;
+        height: 100%;
+        object-fit: cover;
+        }
+
+        .slider-prev,
+        .slider-next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        background: none;
+        border: none;
+        color: white;
+        font-size: 24px;
+        cursor: pointer;
+        }
+
+        .slider-prev {
+        left: 10px;
+        }
+
+        .slider-next {
+        right: 10px;
+        }
     </style>
 </head>
 <body>
@@ -45,6 +88,16 @@
         </div>
 
     </div>
+
+    <div class="slider-container">
+        <div class="slider">
+          <img src="https://th.bing.com/th/id/OIP.rFCWshsLmNk1uwTJCdfHDAHaEK?pid=ImgDet&rs=1" alt="Imagen 1" />
+          <img src="https://th.bing.com/th/id/OIP.Fe8Q7mHtB9a_DRz-m9KTogHaE6?pid=ImgDet&rs=1" alt="Imagen 2" />
+          <img src="https://th.bing.com/th/id/R.d4a1f17d61f4839b6264209b77709859?rik=nWa9SIsWHty%2fkA&riu=http%3a%2f%2f4.bp.blogspot.com%2f-sAl_7NTRusY%2fTdE9hjWLWHI%2fAAAAAAAAACs%2fgvG7YY-Olro%2fs1600%2ftotoro_004.jpg&ehk=xauJ30Q2BMxuJ9ZgphkBlxOC7UivTJRsJdqwbpey50w%3d&risl=&pid=ImgRaw&r=0" alt="Imagen 3" />
+        </div>
+        <button class="slider-prev">Anterior</button>
+        <button class="slider-next">Siguiente</button>
+      </div>
 
     <p class="container">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Perferendis et doloremque aspernatur maxime repellat quibusdam quas eius consequuntur rerum eligendi, quam veritatis labore recusandae consectetur vel cum? Consectetur, sed molestiae.  
     </p>
