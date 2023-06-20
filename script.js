@@ -64,6 +64,30 @@ slider.addEventListener('mouseup', () => {
   isDragging = false;
 });
 
+// Eventos para pantallas táctiles
+slider.addEventListener('touchstart', (e) => {
+  const touch = e.touches[0];
+  startX = touch.clientX;
+});
+
+slider.addEventListener('touchmove', (e) => {
+  e.preventDefault();
+  const touch = e.touches[0];
+  const currentX = touch.clientX;
+  const diffX = currentX - startX;
+  const moveRatio = diffX / slider.offsetWidth;
+  const moveThreshold = 0.1;
+
+  if (Math.abs(moveRatio) >= moveThreshold) {
+    if (moveRatio < 0) {
+      currentIndex = (currentIndex + 1) % slider.children.length;
+    } else {
+      currentIndex = (currentIndex - 1 + slider.children.length) % slider.children.length;
+    }
+    updateSlider();
+  }
+});
+
 function updateSlider() {
   slider.style.transform = `translateX(-${currentIndex * 33.33}%)`;
 }
