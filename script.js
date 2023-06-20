@@ -35,12 +35,14 @@ nextBtn.addEventListener('click', () => {
 });
 
 slider.addEventListener('mousedown', (e) => {
+  if (e.button === 2) return; // Ignore right-click
   isDragging = true;
   startX = e.clientX;
 });
 
 slider.addEventListener('mousemove', (e) => {
   if (isDragging) {
+    e.preventDefault();
     const currentX = e.clientX;
     const diffX = currentX - startX;
     const moveRatio = diffX / slider.offsetWidth;

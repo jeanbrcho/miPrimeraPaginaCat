@@ -2,6 +2,9 @@ body {
   background-image: url(https://img.freepik.com/darmowe-wektory/bezszwowy-sliczny-kot-spi-wzor_75474-320.jpg?size=338&ext=jpg);
   color: black;
 }
+header {
+  height: 55px;
+}
 h1 {
   background-color: rgb(242, 163, 162);
   text-decoration: underline;
@@ -64,6 +67,7 @@ p {
   align-items: center;
   width: 65px;
   height: 60px;
+  cursor: pointer;
 }
 
 .navbar {
